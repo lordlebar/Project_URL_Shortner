@@ -43,5 +43,4 @@ Un internaute peut s’inscrire, avec validation du de son mail, et avoir des fo
 
 Créer un panel d'administration pour modérer les liens raccourcis et les comptes
 
-## Projet initiale :
-        https://github.com/mithy45/Projet_Lamp_EXP2
+## lien Projet initiale : https://github.com/mithy45/Projet_Lamp_EXP2
