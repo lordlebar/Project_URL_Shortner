@@ -65,7 +65,7 @@ Créer un panel d'administration pour modérer les liens raccourcis et les compt
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_FILENAME} !-l
-        RewriteRule ^ https://%{HTTP_HOST}/Projet_Lamp_EXP2/src/pages/configuration/redirection_page.php?       short_url=%{REQUEST_URI} [L,R]
+        RewriteRule ^ https://%{HTTP_HOST}/Projet_Lamp_EXP2/src/pages/configuration/redirection_page.php? short_url=%{REQUEST_URI} [L,R]
         
 ## for htaccess in folder of Project :
 
