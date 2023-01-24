@@ -42,3 +42,40 @@ Un internaute peut s’inscrire, avec validation du de son mail, et avoir des fo
     $ peut modifier une chaine de caractère de son url raccourcie
 
 Créer un panel d'administration pour modérer les liens raccourcis et les comptes
+
+
+## For htaccess in folder html :
+
+        Options -Indexes
+        RewriteEngine on
+        RewriteCond %{HTTPS} off
+        RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]
+
+        Header set Content-Security-Policy "upgrade-insecure-requests"
+        Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        Header set X-Xss-Protection "1; mode=block"
+        Header set X-Frame-Options "SAMEORIGIN"
+        Header set X-Content-Type-Options "nosniff"
+        Header set Referrer-Policy "strict-origin-when-cross-origin"
+        Header set Permissions-Policy "geolocation=self"
+
+        RewriteEngine on
+        RewriteBase /
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteRule ^ https://%{HTTP_HOST}/Projet_Lamp_EXP2/src/pages/configuration/redirection_page.php?       short_url=%{REQUEST_URI} [L,R]
+        
+## for htaccess in folder of Project :
+
+        RewriteEngine on
+        RewriteBase /
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteRule ^ https://%{HTTP_HOST}/Projet_Lamp_EXP2 [L,R]
+
+
+
