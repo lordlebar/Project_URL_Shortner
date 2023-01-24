@@ -21,4 +21,3 @@
 		$query = "DELETE FROM tokens WHERE email = '$email';";
 		query($query);
 	}
-?>

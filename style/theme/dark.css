@@ -1,0 +1,192 @@
+/* --------------------- dark theme --------------------- */
+
+body.dark {
+  background: #161618 !important;
+  color: #f2f2f2 !important;
+}
+
+body.dark .nav-link[aria-current="page"] {
+  background-color: rgba(120, 120, 120, 0.2);
+}
+
+body.dark .nav-link:hover {
+  background-color: rgba(120, 120, 120, 0.1);
+}
+
+body.dark footer {
+  color: #dbdada;
+  background-color: #161618;
+}
+
+body.dark .modal-content {
+  background-color: #1d1d20 !important;
+  color: #f2f2f2 !important;
+}
+
+body.dark .text-danger {
+  color: rgba(251, 89, 60, 0.9) !important;
+}
+
+body.dark .text-primary {
+  color: rgba(81, 168, 255, 0.9) !important;
+}
+
+body.dark .main {
+  /* box shadow pour faire ressortir un main */
+  border-radius: 25px;
+  background: #1d1d20;
+  border: 1px solid rgba(22, 22, 23, 0.4);
+  box-shadow: 0 0 10px rgba(236, 236, 255, 0.2);
+  transition: all 0.3s ease-out;
+}
+
+body.dark .navbar {
+  /* background-color: rgba(84, 88, 95, 0.5) !important;  */
+  background-color: #161618 !important;
+  box-shadow: rgba(139, 220, 239, 0.2) 0px 0px 5px;
+  transition: all 0.3s ease-out;
+}
+
+body.dark .btn-toggle {
+  background: #f2f2f2;
+  color: rgb(90, 96, 103);
+  border: 1px solid rgba(53, 56, 59, 0.9);
+}
+
+body.dark a {
+  color: rgb(139, 220, 239);
+}
+
+body.dark .form-check-input:checked {
+  background-color: rgb(30, 144, 255) !important;
+}
+
+body.dark .navbar-brand {
+  color: #f2f2f2;
+  transition: all 0.3s ease-out;
+}
+
+body.dark .nav-link {
+  color: #f2f2f2;
+  transition: all 0.3s ease-out;
+}
+
+body.dark input {
+  background-color: #f2f2f2;
+  color: rgb(53, 56, 59);
+  border: #8bdcef 10px solid;
+  transition: all 0.3s ease-out;
+}
+
+body.dark .btn {
+  color: #f2f2f2;
+  transition: all 0.3s ease-out;
+}
+
+body.dark .color_search {
+  background-color: rgb(55, 58, 61);
+}
+
+body.dark .color_search:hover {
+  background-color: rgb(44, 46, 48);
+}
+
+body.dark .btn-primary {
+  background-color: rgb(30, 144, 255);
+  /* #1e90ff; */
+}
+
+body.dark .btn-primary:hover {
+  background-color: rgba(30, 144, 255, 0.8);
+  text-decoration: none;
+}
+
+body.dark .btn-danger {
+  background-color: rgba(251, 89, 60, 0.8) !important;
+}
+
+body.dark .btn-danger:hover {
+  background-color: rgba(251, 89, 60, 0.6) !important;
+}
+
+body.dark .btn-warning {
+  background-color: rgba(255, 208, 21, 0.9) !important;
+  color: #161618;
+}
+
+body.dark .btn-warning:hover {
+  background-color: rgba(255, 208, 21, 0.7) !important;
+}
+
+body.dark #table_url tr,
+body.dark #table_url td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 10px;
+}
+body.dark .table-responsive {
+  padding: 2px;
+}
+
+body.dark #table_url {
+  color: #f2f2f2;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+body.dark #table_url td {
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(9, 9, 9, 0.2);
+  border-bottom: none;
+  border-left: none;
+}
+
+body.dark #table_url th {
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
+  border-top: none;
+  border-left: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+body.dark #table_url th:last-child {
+  border-right: none;
+  border-top-right-radius: 10px;
+}
+
+body.dark #table_url th:first-child {
+  border-top-left-radius: 10px;
+}
+
+body.dark #table_url td:last-child {
+  border-right: none;
+}
+
+body.dark #table_url td:first-child {
+  border-left: none;
+}
+
+body.dark tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+body.dark tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+body.dark input[type="text"]:hover,
+body.dark input[type="password"]:hover,
+body.dark input[type="email"]:hover,
+body.dark input[type="checkbox"]:hover {
+  box-shadow: 0 0 10px rgb(78, 200, 234);
+  transition: all 0.3s ease-out;
+}
+
+body.dark input[type="text"]:focus,
+body.dark input[type="password"]:focus,
+body.dark input[type="email"]:focus,
+body.dark input[type="checkbox"]:focus {
+  box-shadow: none;
+  border: 1.5px solid rgb(78, 200, 234) !important;
+}

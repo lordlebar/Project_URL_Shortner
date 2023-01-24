@@ -42,5 +42,3 @@ Un internaute peut s’inscrire, avec validation du de son mail, et avoir des fo
     $ peut modifier une chaine de caractère de son url raccourcie
 
 Créer un panel d'administration pour modérer les liens raccourcis et les comptes
-
-## lien Projet initiale : https://github.com/mithy45/Projet_Lamp_EXP2
