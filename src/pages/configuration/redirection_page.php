@@ -11,14 +11,13 @@
 	<link href="../../../style/style.css" rel="stylesheet">
 </head>
 
-<body class='light' data-barba='wrapper'>
+<body class='light'>
 
 	<?php
 	require_once("../../templates/navbar.php");
 	require_once("../../managers/initialize.php");
 	?>
 	<div class="full-content">
-		<main data-barba="container" data-barba-namespace="redirection_page">
 			<div class="container" style="max-width: 600px;">
 				<div class="main">
 					<div class='alert alert-danger' id='invalid-url' role='alert'>
@@ -28,10 +27,10 @@
 					$short_url = $_GET["short_url"];
 
 					if ($_SERVER["REQUEST_METHOD"] != "GET") {
-						echo "<script>window.location.href = '/Projet_Lamp_EXP2/';</script>";
+						echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
 						exit;
 					} else if (empty($short_url)) {
-						echo "<script>window.location.href = '/Projet_Lamp_EXP2/';</script>";
+						echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
 						exit;
 					} else if ($short_url[0] == '/')
 						$short_url = substr($short_url, 1);
@@ -58,7 +57,7 @@
 					?>
 						<script>
 							setTimeout(function() {
-								window.location.href = '/Projet_Lamp_EXP2/';
+								window.location.href = '/Project_URL_Shortner/';
 							}, 10000);
 						</script>
 					<?php
@@ -84,7 +83,6 @@
 					?>
 				</div>
 			</div>
-		</main>
 	</div>
 
 	<?php

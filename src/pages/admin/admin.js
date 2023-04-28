@@ -14,7 +14,9 @@ function init() {
             },
         });
     } else {
-        $.getJSON("../../managers/getUsers.php", function (data) {
+        console.log("init");
+        $.getJSON("../../managers/getUsers", function (data) {
+            console.log(data);
             createUsersTable(data);
         });
     }
@@ -45,18 +47,16 @@ function createUsersTable(users) {
         td.classList.add("align-middle");
         // link to user's links with email as parameter
 
-        td.innerHTML = `<a href="https://${window.location.host}/Projet_Lamp_EXP2/src/pages/admin/linkUser.php?email=${row.email}" data-toggle="tooltip" data-placement="top" title="Go to links of User ${row.email}">${row.email}</a>`;
+        td.innerHTML = `<a href="http://${window.location.host}/Project_URL_Shortner/src/pages/admin/linkUser.php?email=${row.email}" data-toggle="tooltip" data-placement="top" title="Go to links of User ${row.email}">${row.email}</a>`;
         tr.appendChild(td);
 
         td = document.createElement("td");
         td.classList.add("align-middle");
         // row.is_verified == 1 ? (td.innerText = "Yes") : (td.innerText = "No");
         if (row.is_verified == 1) {
-            td.innerHTML =
-                `<div data-toggle="tooltip" data-placement="top" title="Verified"><i class="fa-solid fa-check-circle text-success"></i></div>`;
+            td.innerHTML = `<div data-toggle="tooltip" data-placement="top" title="Verified"><i class="fa-solid fa-check-circle text-success"></i></div>`;
         } else {
-            td.innerHTML =
-                `<div data-toggle="tooltip" data-placement="top" title="Not Verified"><i class="fa-solid fa-times-circle text-danger"></i></div>`;
+            td.innerHTML = `<div data-toggle="tooltip" data-placement="top" title="Not Verified"><i class="fa-solid fa-times-circle text-danger"></i></div>`;
         }
 
         tr.appendChild(td);
@@ -65,11 +65,9 @@ function createUsersTable(users) {
         td.classList.add("align-middle");
         // row.is_admin == 1 ? (td.innerText = "Yes") : (td.innerText = "No");
         if (row.is_admin == 1) {
-            td.innerHTML =
-                `<div data-toggle="tooltip" data-placement="top" title="Administrator"><i class="fa-solid fa-user-shield text-info"></i></div>`;
+            td.innerHTML = `<div data-toggle="tooltip" data-placement="top" title="Administrator"><i class="fa-solid fa-user-shield text-info"></i></div>`;
         } else {
-            td.innerHTML =
-                `<div data-toggle="tooltip" data-placement="top" title="User"><i class="fa-solid fa-user text-secondary"></i></div>`;
+            td.innerHTML = `<div data-toggle="tooltip" data-placement="top" title="User"><i class="fa-solid fa-user text-secondary"></i></div>`;
         }
         tr.appendChild(td);
 

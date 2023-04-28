@@ -4,4 +4,4 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^ https://%{HTTP_HOST}/Projet_Lamp_EXP2 [L,R]
+RewriteRule ^ http://%{HTTP_HOST}/Project_URL_Shortner [L,R]

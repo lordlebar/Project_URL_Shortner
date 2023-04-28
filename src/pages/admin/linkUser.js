@@ -3,16 +3,16 @@ $.ajaxSetup({ cache: true });
 
 function init() {
     const email = new URLSearchParams(window.location.search).get("email");
-    var search = document.getElementById('search');
+    var search = document.getElementById("search");
     if (search) {
         jQuery.ajax({
             type: "POST",
-            url: '../../managers/getlinksUserSearch.php',
-            dataType: 'json',
-            data: {search: search.value, email: email},
+            url: "../../managers/getlinksUserSearch.php",
+            dataType: "json",
+            data: { search: search.value, email: email },
             success: function (obj, textstatus) {
-                              createUrlUserTable(obj);
-                    }
+                createUrlUserTable(obj);
+            },
         });
     } else {
         fetch("../../managers/getlinksUser.php?email=" + email)
@@ -43,7 +43,7 @@ function createUrlUserTable(urls) {
 
         td = document.createElement("td");
         td.classList.add("align-middle");
-        td.innerHTML = `<a href="https://${window.location.host}/${row.short_url}" data-toggle="tooltip" data-placement="top" title="Go to url ${row.long_url}">${window.location.host}/${row.short_url}</a>`;
+        td.innerHTML = `<a href="http://${window.location.host}/${row.short_url}" data-toggle="tooltip" data-placement="top" title="Go to url ${row.long_url}">${window.location.host}/${row.short_url}</a>`;
         tr.appendChild(td);
 
         td = document.createElement("td");

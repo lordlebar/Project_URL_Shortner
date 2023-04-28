@@ -153,10 +153,10 @@
                             echo '<p>Total click of your links : <strong>' . ($total[0] ? $total[0] : 0) . " click</strong></p>";
                         if ($_SESSION['is_admin']) {
                             echo "<p>Admin : <strong>Yes</strong>, access to the ";
-                            echo "<a href=https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/admin/adminPanel.php>Admin Panel</a></p>";
+                            echo "<a href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/admin/adminPanel.php>Admin Panel</a></p>";
                         } // suppression du compte avec modal confirmation 
                         echo "<button type='button' class='btn btn-danger btn-rounded' data-bs-toggle='modal' data-bs-target='#deleteModal'><i class='fa-solid fa-trash-can'></i> Delete your account</button><br />";
-                        echo "<br /><a href=https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/configuration/change_password.php>Change password ?</a>";
+                        echo "<br /><a href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/configuration/change_password.php>Change password ?</a>";
                         ?>
 
                     </div>

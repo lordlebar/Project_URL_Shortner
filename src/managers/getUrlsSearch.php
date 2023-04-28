@@ -4,12 +4,12 @@ require_once("initialize.php");
 
 if (!isset($_SESSION['email'])) {
     // go to login page
-    echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+    echo "<script>location.href = '/Project_URL_Shortner';</script>";
 }
 
 if (!isset($_POST['search'])) {
     // go to login page
-    echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+    echo "<script>location.href = '/Project_URL_Shortner';</script>";
 }
 $search = $_POST['search'];
 $email = $_SESSION['email'];

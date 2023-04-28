@@ -81,15 +81,16 @@
 						$url_to_shorten = $_POST["URL"];
 						$url_exist = find_url_by_long_url($url_to_shorten, $email);
 						$short_url = $url_exist[1];
+						$print_short_url = false;
 						echo "<h5><p>";
 						if ($url_exist) {
 							if ($is_logged) {
 								echo "<script>$('#long_url_already_shortened').show('medium'); setTimeout(function(){ $('#long_url_already_shortened').hide('medium'); }, 5000);</script>";
-								echo "This URL is already shortened: <a href=https://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a>";
+								echo "This URL is already shortened: <a href=http://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a>";
 							} else {
 								if ($short_url) {
 									echo "<script>$('#url_shortened_success').show('medium'); setTimeout(function(){ $('#url_shortened_success').hide('medium'); }, 5000);</script>";
-									echo "<h5 style='color:rgb(60, 179, 113); font-weight:bold'>Your short URL is : <a style='color:inherit' href=https://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a></h5>";
+									echo "<h5 style='color:rgb(60, 179, 113); font-weight:bold'>Your short URL is : <a style='color:inherit' href=http://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a></h5>";
 								}
 							}
 						} else {
@@ -119,7 +120,7 @@
 						}
 						echo "</p></h5>";
 						if ($short_url && $print_short_url)
-							echo "<h5 style='color:rgb(60, 179, 113); font-weight:bold'>Your short URL is : <a style='color:inherit' href=https://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a></h5>";
+							echo "<h5 style='color:rgb(60, 179, 113); font-weight:bold'>Your short URL is : <a style='color:inherit' href=http://" . $_SERVER["HTTP_HOST"] . "/$short_url > " . $_SERVER["HTTP_HOST"] . "/$short_url</a></h5>";
 					}
 
 					if ($is_logged) {

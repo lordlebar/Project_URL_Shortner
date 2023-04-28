@@ -3,11 +3,11 @@ include '../db/connexion.php';
 require_once("initialize.php");
 
 if (!isset($_SESSION['email'])) {
-    echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+    echo "<script>location.href = '/Project_URL_Shortner';</script>";
 }
 
 if (!isset($_POST['search'])) {
-    echo "<script>location.href = '/Projet_Lamp_EXP2/src/pages/admin/adminPanel.php';</script>";
+    echo "<script>location.href = '/Project_URL_Shortner/src/pages/admin/adminPanel.php';</script>";
 }
 $search = $_POST['search'];
 $sql = "SELECT * FROM users WHERE name like '%$search%' || email like '%$search%'";

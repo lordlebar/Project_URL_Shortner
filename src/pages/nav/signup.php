@@ -69,11 +69,11 @@
 
 								$subject = "Verified email";
 								$content = "Please click on this link to verified your email and be able to connect : <a href=";
-								$content .= "https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/configuration/verified_email.php?token=$token>Activate my email</a><p> or follow this link https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/configuration/verified_email.php?token=" . $token . "</p>";
-								send_mail_to($email, $subject, $content);
+								$content .= "https://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/configuration/verified_email.php?token=$token>Activate my email</a><p> or follow this link https://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/configuration/verified_email.php?token=" . $token . "</p>";
+								// send_mail_to($email, $subject, $content);
 
 								echo "<p style='color:rgb(60, 179, 113)'>A mail has been sent at $email to verified your email";
-								// echo "<br /><a href=https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/configuration/verified_email.php?token=$token>Verify email</a>";
+								echo "<br /><a href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/configuration/verified_email.php?token=$token>Verify email</a>";
 							}
 							echo " !</p></h5>";
 						}

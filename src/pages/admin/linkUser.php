@@ -29,7 +29,7 @@
     require_once("../../managers/initialize.php");
     // if not connected, die
     if (!isset($_SESSION['email']) || !$_SESSION['is_admin']) {
-        echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+        echo "<script>location.href = '/Project_URL_Shortner';</script>";
     }
     ?>
     <div class='full-content'>
@@ -133,7 +133,7 @@
             while ($row = $links->fetch_assoc()) {
                 echo "<tr>";
                 $short_url = $row["short_url"];
-                $td_short_url = "<a href=https://" . $_SERVER["HTTP_HOST"] . "/$short_url>" . $_SERVER["HTTP_HOST"] . "/$short_url</a>";
+                $td_short_url = "<a href=http://" . $_SERVER["HTTP_HOST"] . "/$short_url>" . $_SERVER["HTTP_HOST"] . "/$short_url</a>";
 
                 $long_url = $row["long_url"];
                 $mem_long_url = $long_url;

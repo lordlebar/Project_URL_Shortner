@@ -11,13 +11,12 @@
 	<link href="../../../style/style.css" rel="stylesheet">
 </head>
 
-<body class='light' data-barba='wrapper'>
+<body class='light'>
 	<?php
 	require_once("../../templates/navbar.php");
 	require_once("../../managers/initialize.php");
 	?>
 	<div class='full-content'>
-		<main data-barba="container" data-barba-namespace="verified_email">
 			<div class="container" style="max-width: 600px;">
 
 				<div class="main">
@@ -25,7 +24,7 @@
 					<?php
 
 					if ($_SERVER["REQUEST_METHOD"] != "GET" || !isset($_GET["token"])) {
-						header("Location: https://corentin.lebarilier.13h37.io/Projet_Lamp_EXP2/");
+						header("Location: http://corentin.lebarilier.13h37.io/Project_URL_Shortner/");
 						die();
 					}
 
@@ -46,15 +45,14 @@
 						}
 						delete_token_by_email($email);
 						echo "</p></h4>";
-						echo "<a style='font-size: 20px' href=https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/pages/nav/login.php>Login</a>";
+						echo "<a style='font-size: 20px' href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/nav/login.php>Login</a>";
 					} else {
-						header("Location: https://corentin.lebarilier.13h37.io/Projet_Lamp_EXP2/");
+						header("Location: http://corentin.lebarilier.13h37.io/Project_URL_Shortner/");
 						die();
 					}
 					?>
 				</div>
 			</div>
-		</main>
 	</div>
 
 	<?php

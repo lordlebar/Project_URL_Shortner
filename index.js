@@ -2,21 +2,22 @@ window.onload = init;
 $.ajaxSetup({ cache: false });
 
 function init() {
-    var search = document.getElementById('search');
+    console.log("init");
+    var search = document.getElementById("search");
     if (search) {
         jQuery.ajax({
             type: "POST",
-            url: 'src/managers/getUrlsSearch.php',
-            dataType: 'json',
-            data: {search: search.value},
+            url: "src/managers/getUrlsSearch.php",
+            dataType: "json",
+            data: { search: search.value },
             success: function (obj, textstatus) {
-                              createUrlTable(obj);
-                    }
+                createUrlTable(obj);
+            },
         });
     } else {
-   	$.getJSON("src/managers/getUrls.php", function (data) {
-		createUrlTable(data);
-    	});
+        $.getJSON("src/managers/getUrls.php", function (data) {
+            createUrlTable(data);
+        });
     }
 }
 
@@ -38,7 +39,7 @@ function createUrlTable(urls) {
 
         td = document.createElement("td");
         td.classList.add("align-middle");
-        td.innerHTML = `<a href="https://${window.location.host}/${row.short_url}" data-toggle="tooltip" data-placement="top" title="Go to url ${row.long_url}">${window.location.host}/${row.short_url}</a>`;
+        td.innerHTML = `<a href="http://${window.location.host}/${row.short_url}" data-toggle="tooltip" data-placement="top" title="Go to url ${row.long_url}">${window.location.host}/${row.short_url}</a>`;
         tr.appendChild(td);
 
         td = document.createElement("td");

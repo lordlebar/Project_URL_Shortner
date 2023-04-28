@@ -35,7 +35,7 @@
     require_once("../../managers/initialize.php");
     // si non connecter ou non admin on redirige vers la page d'accueil
     if (!isset($_SESSION['email']) || !$_SESSION['is_admin']) {
-        echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+        echo "<script>location.href = '/Project_URL_Shortner';</script>";
     }
     ?>
     <div class='full-content'>
@@ -88,6 +88,7 @@
                     </div>
                 </div>
             <?php
+            echo !isset($_SESSION['email']);
                 echo "</main></div>";
                 // Modal to add a new user
                 require_once("../../templates/modals/modalAdmin/addUserModal.php");
@@ -99,7 +100,7 @@
                 require_once("../../templates/modals/modalAdmin/deleteUserModal.php");
             } else {
                 echo "</main></div>";
-                echo "<script>location.href = '/Projet_Lamp_EXP2';</script>";
+                echo "<script>location.href = '/Project_URL_Shortner';</script>";
             }
             require_once("../../templates/footer.php");
             ?>

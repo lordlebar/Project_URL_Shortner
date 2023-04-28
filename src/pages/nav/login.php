@@ -46,7 +46,7 @@
 						<br>
 						<?php
 						if (isset($_SESSION["is_logged"]) && $_SESSION["is_logged"]) {
-							echo "<script>window.location.href = '/Projet_Lamp_EXP2/';</script>";
+							echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
 						}
 
 						if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -68,7 +68,7 @@
 								$_SESSION["email"] = $email;
 								$_SESSION["is_admin"] = $user[3];
 								// got to Project_Lamp_EXP2 en javascript
-								echo "<script>window.location.href = '/Projet_Lamp_EXP2/';</script>";
+								echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
 							}
 							echo " !</p></h5>";
 						}

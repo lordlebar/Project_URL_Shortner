@@ -1,10 +1,10 @@
 <?php
 	session_start();
+	// require_once("mail_manager.php");
+	require_once("sql_token_manager.php");
+	require_once("sql_user_manager.php");
+	require_once("token_manager.php");
+	require_once("sql_url_manager.php");
+	require_once("url_manager.php");
 
-	$dir_name = dirname(__FILE__);
-	require_once(realpath("$dir_name/mail_manager.php"));
-	require_once(realpath("$dir_name/sql_token_manager.php"));
-	require_once(realpath("$dir_name/sql_user_manager.php"));
-	require_once(realpath("$dir_name/token_manager.php"));
-	require_once(realpath("$dir_name/sql_url_manager.php"));
-	require_once(realpath("$dir_name/url_manager.php"));
+

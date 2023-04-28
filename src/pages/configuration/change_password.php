@@ -11,14 +11,13 @@
     <link href="../../../style/style.css" rel="stylesheet">
 </head>
 
-<body class='light' data-barba='wrapper'>
+<body class='light'>
     <?php
     require_once("../../templates/navbar.php");
     require_once("../../managers/initialize.php");
     ?>
 
     <div class='full-content'>
-        <main data-barba="container" data-barba-namespace="change_password">
             <div class="container" style="max-width: 600px;">
                 <div class="main">
 
@@ -73,7 +72,7 @@
                                 else {
                                     $new_password = password_hash($new_password, PASSWORD_DEFAULT);
                                     modify_passord_user($new_password, $email);
-                                    echo "<p style='color:rgb(60, 179, 113)'>Password changed ! try to <a href=https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/src/template/users/nav/login.php>login</a> again";
+                                    echo "<p style='color:rgb(60, 179, 113)'>Password changed ! try to <a href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/template/users/nav/login.php>login</a> again";
                                 }
                             }
                         }
@@ -86,7 +85,6 @@
 
                 </div>
             </div>
-        </main>
     </div>
     <?php
     require_once("../../templates/footer.php");

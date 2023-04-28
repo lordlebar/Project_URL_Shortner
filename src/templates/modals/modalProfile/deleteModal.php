@@ -39,7 +39,7 @@ if (isset($_POST['delete-user'])) {
         unset($_SESSION["is_admin"]);
 
         // on redirige vers la page d'accueil
-        echo "<script>window.location.href = 'https://" . $_SERVER["HTTP_HOST"] . "/Projet_Lamp_EXP2/';</script>";
+        echo "<script>window.location.href = 'http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/';</script>";
     }
 }
 ?>

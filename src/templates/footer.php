@@ -1,7 +1,7 @@
 <footer class="p-0">
     <div class="text-center mt-3">
         <h6>© 2022 - 2023 | URL Shortener | Projet Web S3 </h6>
-        <a class="text-reset fw-bold" href="https://corentin.lebarilier.13h37.io/Projet_Lamp_EXP2">corentin.lebarilier.13h37.io/Projet_Lamp_EXP2</a>
+        <a class="text-reset fw-bold" href="http://corentin.lebarilier.13h37.io/Projet_Lamp_EXP2">corentin.lebarilier.13h37.io/Projet_Lamp_EXP2</a>
         <p style='font-size: 12px'>
             Quentin GUYOT · Theo BILLET · Adrienne-Louise TCHAMGOUE · Xavier KOUASSI · Corentin LEBARILIER
         </p>
