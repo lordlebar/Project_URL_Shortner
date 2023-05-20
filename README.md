@@ -12,13 +12,13 @@ Charte graphique 5 pts
 Allez plus loin que le cahier des charges : 10 pts
 Notation par élèves 10 pts
 
--   #### Obligatoire :
+- #### Obligatoire :
 
-          $ Avoir un nom d’équipe
-          $ Utilisation de boostrap
-          $ Utilisation du https
-          $ Utilisation d’un git pour le travail d’équipe
-          $ Le mail sera la référence unique de l’inscrit
+        $ Avoir un nom d’équipe
+        $ Utilisation de boostrap
+        $ Utilisation du https
+        $ Utilisation d’un git pour le travail d’équipe
+        $ Le mail sera la référence unique de l’inscrit
 
 Toutes les erreurs doivent être traitées : pas de doublons de mails d’inscrits, recouvrement de mot de passe oublié par mail, validation d’inscription par mail…
 
@@ -68,7 +68,6 @@ Créer un panel d'administration pour modérer les liens raccourcis et les compt
         RewriteCond %{REQUEST_FILENAME} !-l
         RewriteRule ^ https://%{HTTP_HOST}/Project_URL_Shortner/src/pages/configuration/redirection_page.php?short_url=%{REQUEST_URI} [L,R]
 
-
 ## for htaccess in folder of Project :
 
         RewriteEngine on
@@ -78,3 +77,19 @@ Créer un panel d'administration pour modérer les liens raccourcis et les compt
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_FILENAME} !-l
         RewriteRule ^ https://%{HTTP_HOST}/Project_URL_Shortner [L,R]
+
+## DEVOPS
+
+### Docker
+
+Build Project
+
+     docker build -t php_url_shortner ./docker
+
+Run The container
+
+    docker run -d --rm -p 8080:80 --name php_url_shortner -v "$PWD":/var/www/Project_URL_Shortner php_url_shortner
+
+Interact with Container
+
+     docker exec -it php_url_shortner bash
