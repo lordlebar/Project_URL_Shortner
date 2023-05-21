@@ -16,6 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    stage: build
+    script:
+      - composer install --no-dev --optimize-autoloader
+    artifacts:
+      paths:
+        - vendor/  # Inclure le répertoire vendor dans les artifacts
+      expire_in: 1 week  # Spécifier la durée de conservation des artifacts
+
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
