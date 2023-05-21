@@ -12,20 +12,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout du code source
+      uses: actions/checkout@v2
 
-    stage: build
-    script:
-      - composer install --no-dev --optimize-autoloader
-    artifacts:
-      paths:
-        - vendor/  # Inclure le répertoire vendor dans les artifacts
-      expire_in: 1 week  # Spécifier la durée de conservation des artifacts
+    - name: Configuration de PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4' # Remplacez par la version de PHP souhaitée
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+    - name: Installer les dépendances
+      run: composer install
 
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Lancer les tests
+      run: vendor/bin/phpunit
