@@ -20,7 +20,7 @@ COPY ./php.ini /usr/local/etc/php/
 
 RUN apt-get purge -y g++ \
     && apt-get autoremove -y \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -r /var/lib/apt/lists/* \
     && rm -rf /tmp/* \
     && sh install-composer.sh \
     && rm ./install-composer.sh

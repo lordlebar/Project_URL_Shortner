@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./docker
+    image: corentin/php_url_shortner
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/Project_URL_Shortner
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: php_url_shortner
+      MYSQL_USER: php_url_shortner
+      MYSQL_PASSWORD: php_url_shortner
+    ports:
+      - "3306:3306"
