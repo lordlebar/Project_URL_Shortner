@@ -1,3 +1,7 @@
+<?php
+require_once ("./src/db/connexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

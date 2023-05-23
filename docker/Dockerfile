@@ -12,7 +12,7 @@ RUN apt-get update && \
     unzip \
     -y --no-install-recommends
 
-RUN docker-php-ext-install zip pdo_mysql
+RUN docker-php-ext-install zip mysqli pdo_mysql
 
 COPY ./install-composer.sh ./
 

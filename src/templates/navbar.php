@@ -1,3 +1,7 @@
+<?php
+require_once ("./src/db/connexion.php");
+?>
+
 <!-- ------ Bar de navigation ------ -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 25px;">
 	<div class="container-fluid">

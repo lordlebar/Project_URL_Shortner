@@ -1,3 +1,7 @@
+<?php
+require_once ("./src/db/connexion.php");
+?>
+
 <footer class="p-0">
     <div class="text-center mt-3">
         <h6>© 2022 - 2023 | URL Shortener | Projet Web S3 </h6>
