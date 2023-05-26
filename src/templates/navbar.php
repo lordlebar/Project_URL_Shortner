@@ -9,7 +9,10 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 5%;">
 
 				<?php
-				session_start();
+				if(!isset($_SESSION)) 
+				{ 
+					session_start(); 
+				} 
 
 				// SESSION is_logged not undifined
 

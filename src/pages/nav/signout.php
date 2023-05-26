@@ -1,7 +1,10 @@
 
     <?php
     // reload page
-    session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
     unset($_SESSION["is_logged"]);
     unset($_SESSION["name"]);
     unset($_SESSION["email"]);
