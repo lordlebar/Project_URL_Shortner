@@ -1,5 +1,7 @@
 <?php
-    require_once ("./src/db/connexion.php");
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +37,8 @@
 <body class='light' data-barba='wrapper'>
 
 	<?php
-	require_once("src/templates/navbar.php");
-	require_once("src/managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 	?>
 
 	<!--

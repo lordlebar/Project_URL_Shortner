@@ -1,5 +1,5 @@
 <?php
-require_once ("./src/db/connexion.php");
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
 ?>
 
 <!-- Alert -->

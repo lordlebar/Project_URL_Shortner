@@ -1,9 +1,10 @@
 
     <?php
     // reload page
-    session_start();
+    if (!isset($_SESSION))
+        session_start();
 
-    require_once("./src/db/connexion.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
 
     unset($_SESSION["is_logged"]);
     unset($_SESSION["name"]);

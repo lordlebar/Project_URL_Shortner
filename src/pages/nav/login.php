@@ -1,5 +1,5 @@
 <?php
-require_once ("./src/db/connexion.php");
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +25,8 @@ require_once ("./src/db/connexion.php");
 
 <body class='light' data-barba='wrapper'>
 	<?php
-	require_once("../../templates/navbar.php");
-	require_once("../../managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 	?>
 	<div class='full-content'>
 		<main data-barba="container" data-barba-namespace="login">
@@ -71,8 +71,7 @@ require_once ("./src/db/connexion.php");
 								$_SESSION["name"] = $user[0];
 								$_SESSION["email"] = $email;
 								$_SESSION["is_admin"] = $user[3];
-								// got to Project_Lamp_EXP2 en javascript
-								echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
+								echo "<script>window.location.href = '/Project_URL_Shortner/index.php';</script>";
 							}
 							echo " !</p></h5>";
 						}
