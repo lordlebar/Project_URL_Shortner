@@ -1,4 +1,6 @@
 <?php
+
+namespace App;
 require_once(realpath(dirname(__FILE__) . "/../db/connexion.php"));
 
 function is_email_exists($email)
@@ -13,7 +15,10 @@ function is_email_exists($email)
 function insert_user($name, $email, $password, $is_admin, $is_verified)
 {
 	$query = "INSERT INTO users (name, email, password, is_admin, is_verified) VALUES ('$name', '$email', '$password', $is_admin, $is_verified);";
-	query($query);
+	$res = query($query);
+	if ($res->num_rows != 0)
+		return 1;
+	return 0;
 }
 
 function find_user_by_email($email)
