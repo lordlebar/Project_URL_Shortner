@@ -49,7 +49,7 @@ if (isset($_POST["update_short_url"]) && isset($_POST["update_hidden_short_url"]
     }
 
     $url_exist = find_url_by_long_url($update_long_url, $email);
-    if ($url_exist[3] == $update_long_url && $update_long_url != $update_hidden_long_url) {
+    if ($url_exist && $url_exist[3] == $update_long_url && $update_long_url != $update_hidden_long_url) {
         echo "<script>$('#long_url_already_exist').show('medium'); setTimeout(function(){ $('#long_url_already_exist').hide('medium'); }, 5000);</script>";
     }
 

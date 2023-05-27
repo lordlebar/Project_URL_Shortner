@@ -2,7 +2,7 @@ window.onload = init;
 $.ajaxSetup({ cache: false });
 
 function init() {
-    var search = document.getElementById("search");
+    const search = document.getElementById("search");
     if (search) {
         jQuery.ajax({
             type: "POST",
@@ -15,7 +15,7 @@ function init() {
         });
     } else {
         console.log("init");
-        $.getJSON("../../managers/getUsers", function (data) {
+        $.getJSON("../../managers/getUsers.php", function (data) {
             console.log(data);
             createUsersTable(data);
         });

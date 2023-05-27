@@ -1,5 +1,5 @@
 <?php
-require_once(realpath(dirname(__FILE__) . "/../db/connexion.php"));
+include '../db/connexion.php';
 require_once("initialize.php");
 
 $sql = "SELECT * FROM users";
