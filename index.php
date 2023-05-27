@@ -2,10 +2,6 @@
 <html lang="en">
 
 <head>
-	<?php
-	echo phpinfo();
-	exit;
-	?>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,7 +80,7 @@
 					if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["URL"])) {
 						$url_to_shorten = $_POST["URL"];
 						$url_exist = find_url_by_long_url($url_to_shorten, $email);
-						$short_url = $url_exist[1];
+						$url_exist ? $short_url = $url_exist[1] : null;
 						$print_short_url = false;
 						echo "<h5><p>";
 						if ($url_exist) {
