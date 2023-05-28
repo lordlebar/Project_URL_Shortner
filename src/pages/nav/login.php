@@ -31,7 +31,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion
 	<div class='full-content'>
 		<main data-barba="container" data-barba-namespace="login">
 
-
 			<div class="container" style="max-width: 600px;">
 
 				<div class="main">
@@ -50,7 +49,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion
 						<br>
 						<?php
 						if (isset($_SESSION["is_logged"]) && $_SESSION["is_logged"]) {
-							echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
+							echo "<script>window.location.href = '/Project_URL_Shortner';</script>";
 						}
 
 						if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -71,7 +70,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion
 								$_SESSION["name"] = $user[0];
 								$_SESSION["email"] = $email;
 								$_SESSION["is_admin"] = $user[3];
-								echo "<script>window.location.href = '/Project_URL_Shortner/index.php';</script>";
+								echo "<script>window.location.href = '/Project_URL_Shortner';</script>";
 							}
 							echo " !</p></h5>";
 						}
@@ -90,7 +89,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion
 		</main>
 	</div>
 	<?php
-	require_once("../../templates/footer.php");
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
 	?>
 </body>
 

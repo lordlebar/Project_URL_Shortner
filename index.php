@@ -1,7 +1,5 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
-
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -170,15 +168,16 @@ session_start();
 	<script src='index.js'></script>
 <?php
 						// Modal to update a url
-						require_once("src/templates/modals/modalIndex/updateModal.php");
+						require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalIndex/updateModal.php";
 
 						// Modal to delete a url
-						require_once("src/templates/modals/modalIndex/deleteModal.php");
+						require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalIndex/deleteModal.php";
+
 					} else {
 						echo "</div></div></main></div>";
 					}
-					require_once("src/templates/footer.php");
-?>
+					require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
+					?>
 
 </body>
 

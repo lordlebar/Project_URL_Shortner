@@ -1,6 +1,6 @@
 <?php
-require_once(realpath(dirname(__FILE__) . "/../db/connexion.php"));
-require_once("initialize.php");
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 
 $sql = "SELECT * FROM users";
 $result = mysqli_query($con, $sql);

@@ -1,6 +1,6 @@
 <?php
-include '../db/connexion.php';
-require_once("initialize.php");
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 
 if (!isset($_SESSION['email'])) {
     // go to login page

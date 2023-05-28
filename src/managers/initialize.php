@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	// require_once("mail_manager.php");
 	require_once("sql_token_manager.php");
 	require_once("sql_user_manager.php");

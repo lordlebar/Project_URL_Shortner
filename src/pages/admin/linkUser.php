@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,10 +81,9 @@
 
 
     <?php
-    require_once("../../templates/footer.php");
-
-    require_once("../../templates/modals/modalLinksUser/updateUrlUserModal.php");
-    require_once("../../templates/modals/modalLinksUser/deleteUrlUserModal.php");
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalLinksUser/updateUrlUserModal.php";
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalLinksUser/deleteUrlUserModal.php";
 
     ?>
 
