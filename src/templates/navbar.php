@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!-- ------ Bar de navigation ------ -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 25px;">
 	<div class="container-fluid">
@@ -9,11 +13,6 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 5%;">
 
 				<?php
-				session_start();
-
-				// SESSION is_logged not undifined
-
-
 				echo "<li class='nav-item'><a class='nav-link' href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/>Home<span class=sr-only></span></a>";
 				if (!isset($_SESSION["is_logged"])) {
 					echo "<li class='nav-item'><a class=nav-link  href=http://" . $_SERVER["HTTP_HOST"] . "/Project_URL_Shortner/src/pages/nav/login.php>Log in<span class=sr-only></span></a></li>";
@@ -54,5 +53,5 @@
 </div>
 
 <?php
-require_once('alert.php');
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/alert.php";
 ?>

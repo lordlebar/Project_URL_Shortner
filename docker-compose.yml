@@ -8,12 +8,17 @@ services:
       - 8080:80
     volumes:
       - ./:/var/www/Project_URL_Shortner
+      - ./docker/.htaccess:/var/www/.htaccess
+    depends_on:
+      - db
   db:
     image: mysql:8
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: php_url_shortner
+      MYSQL_DATABASE: ACQTX
       MYSQL_USER: php_url_shortner
       MYSQL_PASSWORD: php_url_shortner
+    volumes:
+      - ./BDD.sql:/docker-entrypoint-initdb.d/BDD.sql
     ports:
       - "3306:3306"

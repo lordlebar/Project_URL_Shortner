@@ -1,5 +1,5 @@
 <?php
-include '../db/connexion.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
 require_once("initialize.php");
 
 if (!isset($_SESSION['email'])) {

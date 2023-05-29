@@ -1,0 +1,11 @@
+Options -Indexes
+RewriteEngine on
+
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^ /Project_URL_Shortner/src/pages/configuration/redirection_page.php?short_url=%{REQUEST_URI} [L,R]

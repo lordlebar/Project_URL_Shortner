@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +29,8 @@
 
 <body class='light' data-barba='wrapper'>
     <?php
-    require_once("../../templates/navbar.php");
-    require_once("../../managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
     // if not connected, die
     if (!isset($_SESSION['email']) || !$_SESSION['is_admin']) {
         echo "<script>location.href = '/Project_URL_Shortner';</script>";
@@ -77,10 +81,9 @@
 
 
     <?php
-    require_once("../../templates/footer.php");
-
-    require_once("../../templates/modals/modalLinksUser/updateUrlUserModal.php");
-    require_once("../../templates/modals/modalLinksUser/deleteUrlUserModal.php");
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalLinksUser/updateUrlUserModal.php";
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalLinksUser/deleteUrlUserModal.php";
 
     ?>
 

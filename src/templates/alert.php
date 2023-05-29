@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!-- Alert -->
 <div class="alert alert-success alert-dismissible fade show" role="alert" id="valid-delete-user">
     <p><i class="fa-solid fa-check-circle"></i> Account <strong><?php echo $_POST['delete-user'] ?></strong> has been deleted.</p>

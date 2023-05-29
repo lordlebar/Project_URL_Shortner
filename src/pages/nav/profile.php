@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,8 +66,8 @@
 
 <body class='light' data-barba='wrapper'>
     <?php
-    require_once("../../templates/navbar.php");
-    require_once("../../managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
     // si non connecter on die
     if (!isset($_SESSION['email'])) {
         die("You are not connected");
@@ -166,8 +170,8 @@
     </div>
 
     <?php
-    require_once("../../templates/modals/modalProfile/deleteModal.php");
-    require_once("../../templates/footer.php");
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalProfile/deleteModal.php";
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
     ?>
 </body>
 

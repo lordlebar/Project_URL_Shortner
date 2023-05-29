@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,12 +25,11 @@
 
 <body class='light' data-barba='wrapper'>
 	<?php
-	require_once("../../templates/navbar.php");
-	require_once("../../managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 	?>
 	<div class='full-content'>
 		<main data-barba="container" data-barba-namespace="login">
-
 
 			<div class="container" style="max-width: 600px;">
 
@@ -46,7 +49,7 @@
 						<br>
 						<?php
 						if (isset($_SESSION["is_logged"]) && $_SESSION["is_logged"]) {
-							echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
+							echo "<script>window.location.href = '/Project_URL_Shortner';</script>";
 						}
 
 						if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -67,8 +70,7 @@
 								$_SESSION["name"] = $user[0];
 								$_SESSION["email"] = $email;
 								$_SESSION["is_admin"] = $user[3];
-								// got to Project_Lamp_EXP2 en javascript
-								echo "<script>window.location.href = '/Project_URL_Shortner/';</script>";
+								echo "<script>window.location.href = '/Project_URL_Shortner';</script>";
 							}
 							echo " !</p></h5>";
 						}
@@ -87,7 +89,7 @@
 		</main>
 	</div>
 	<?php
-	require_once("../../templates/footer.php");
+	require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
 	?>
 </body>
 

@@ -31,8 +31,6 @@ if (isset($_POST['delete-user'])) {
     if (find_user_by_email($email_delete)) {
         // on delete l'utilisateur
         delete_user_by_email($email_delete);
-        // on supprime la session
-        session_start();
         unset($_SESSION["is_logged"]);
         unset($_SESSION["name"]);
         unset($_SESSION["email"]);

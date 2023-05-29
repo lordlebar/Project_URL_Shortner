@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,8 +35,8 @@
 <body class='light' data-barba='wrapper'>
 
 	<?php
-	require_once("src/templates/navbar.php");
-	require_once("src/managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
 	?>
 
 	<!--
@@ -164,15 +168,16 @@
 	<script src='index.js'></script>
 <?php
 						// Modal to update a url
-						require_once("src/templates/modals/modalIndex/updateModal.php");
+						require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalIndex/updateModal.php";
 
 						// Modal to delete a url
-						require_once("src/templates/modals/modalIndex/deleteModal.php");
+						require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalIndex/deleteModal.php";
+
 					} else {
 						echo "</div></div></main></div>";
 					}
-					require_once("src/templates/footer.php");
-?>
+					require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
+					?>
 
 </body>
 

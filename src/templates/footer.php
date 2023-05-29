@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <footer class="p-0">
     <div class="text-center mt-3">
         <h6>© 2022 - 2023 | URL Shortener | Projet Web S3 </h6>
@@ -10,7 +14,7 @@
 
 <!-- script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://unpkg.com/@barba/core"></script>
+<!-- <script src="https://unpkg.com/@barba/core"></script> -->
 
 <script>
     document.querySelectorAll(".nav-link").forEach((link) => {

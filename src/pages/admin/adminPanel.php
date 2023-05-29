@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
     <style>
         body.dark .confirm-update {
             color: rgb(22, 22, 24);
@@ -31,18 +34,15 @@
 
 <body class='light' data-barba='wrapper'>
     <?php
-    require_once("../../templates/navbar.php");
-    require_once("../../managers/initialize.php");
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/navbar.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/managers/initialize.php";
     // si non connecter ou non admin on redirige vers la page d'accueil
-    if (!isset($_SESSION['email']) || !$_SESSION['is_admin']) {
-        echo "<script>location.href = '/Project_URL_Shortner';</script>";
-    }
+    // if (!isset($_SESSION['email']) || !$_SESSION['is_admin']) {
+    //     echo "<script>location.href = '/Project_URL_Shortner';</script>";
+    // }
     ?>
     <div class='full-content'>
         <main data-barba="container" data-barba-namespace="adminPanel">
-            <?php
-            if ($_SESSION["is_admin"]) {
-            ?>
                 <div class="container" style="max-width: 1000px;">
                     <div class="main">
                         <h3>Admin Panel</h3>
@@ -88,23 +88,15 @@
                     </div>
                 </div>
             <?php
-            echo !isset($_SESSION['email']);
                 echo "</main></div>";
-                // Modal to add a new user
-                require_once("../../templates/modals/modalAdmin/addUserModal.php");
-
-                // Modal to update a user
-                require_once("../../templates/modals/modalAdmin/updateUserModal.php");
-
-                // Modal to delete a user
-                require_once("../../templates/modals/modalAdmin/deleteUserModal.php");
-            } else {
-                echo "</main></div>";
-                echo "<script>location.href = '/Project_URL_Shortner';</script>";
-            }
-            require_once("../../templates/footer.php");
+                require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalAdmin/addUserModal.php";
+                require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalAdmin/updateUserModal.php";
+                require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/modals/modalAdmin/deleteUserModal.php";
+                require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
             ?>
-            <script src="admin.js"></script>
+
+<script src="admin.js"></script>
+
 </body>
 
 </html>

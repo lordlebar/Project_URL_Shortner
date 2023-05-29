@@ -1,11 +1,9 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion.php";
 
-    <?php
-    // reload page
-    session_start();
-    unset($_SESSION["is_logged"]);
-    unset($_SESSION["name"]);
-    unset($_SESSION["email"]);
-    unset($_SESSION["is_admin"]);
+unset($_SESSION["is_logged"]);
+unset($_SESSION["name"]);
+unset($_SESSION["email"]);
+unset($_SESSION["is_admin"]);
 
-    header("Location: '/Project_URL_Shortner/'");
-    ?>
+echo "<script>window.location.href = '/Project_URL_Shortner';</script>";

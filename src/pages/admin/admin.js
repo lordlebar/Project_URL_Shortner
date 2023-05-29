@@ -16,7 +16,6 @@ function init() {
     } else {
         console.log("init");
         $.getJSON("../../managers/getUsers.php", function (data) {
-            console.log(data);
             createUsersTable(data);
         });
     }
