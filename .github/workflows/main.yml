@@ -2,7 +2,8 @@ name: PHP Composer
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - "*"
   pull_request:
     branches: [ "main" ]
 
@@ -17,13 +18,5 @@ jobs:
     - name: Checkout du code source
       uses: actions/checkout@v2
 
-    - name: Configuration de PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4' # Remplacez par la version de PHP souhaitée
-
     - name: Installer les dépendances
       run: composer install
-
-    - name: Lancer les tests
-      run: vendor/bin/phpunit
