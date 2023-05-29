@@ -18,5 +18,10 @@ jobs:
     - name: Checkout du code source
       uses: actions/checkout@v2
 
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.2
+
     - name: Installer les dépendances
       run: composer install
