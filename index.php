@@ -177,6 +177,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/db/connexion
 						echo "</div></div></main></div>";
 					}
 					require_once $_SERVER["DOCUMENT_ROOT"] . "/Project_URL_Shortner/src/templates/footer.php";
+					
 					?>
 
 </body>
