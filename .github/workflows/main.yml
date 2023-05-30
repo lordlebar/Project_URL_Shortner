@@ -25,3 +25,6 @@ jobs:
 
     - name: Installer les dépendances
       run: composer install
+
+    - name: Lancer tests
+      run: php vendor/bin/phpunit tests/test.php --color
